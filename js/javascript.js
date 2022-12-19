@@ -32,7 +32,7 @@ function oneClicked()
     // ถ้าใช้กับตัวแปรประเภทสตริง จะเป็นการนำอักษรนั้นๆไปต่อท้ายข้อความเดิม
     // ถ้าใช้กับตัวแปรประเภทตัวเลข จะเป็นการคำนวนทางคณิตศาสตร์
     currentOutput += "1";
-
+    //currentOutput = currentOutput + "1";
     // ตัวอย่าง API ในการเข้าถึงและเซตค่า HTML element ด้วยภาษา javascript
         // ตัวอย่าง:
             // var e = document.getElementById("ไอดีของเอเลเม้นนั้นๆ")
@@ -49,66 +49,93 @@ function oneClicked()
 function twoClicked()
 {
     dbg("2 is clicked");
+
+    currentOutput += "2";
+    document.getElementById("display").value = currentOutput;
 }
 
 function threeClicked()
 {
     dbg("3 is clicked");
+    currentOutput += "3";
+    document.getElementById("display").value = currentOutput;
 }
 
 function fourClicked()
 {
     dbg("4 is clicked");
+    currentOutput += "4";
+    document.getElementById("display").value = currentOutput;
 }
 
 function fiveClicked()
 {
     dbg("5 is clicked");
+    currentOutput += "5";
+    document.getElementById("display").value = currentOutput;
 }
 
 function sixClicked()
 {
     dbg("6 is clicked");
+    currentOutput += "6";
+    document.getElementById("display").value = currentOutput;
 }
 
 function sevenClicked()
 {
     dbg("7 is clicked");
+    currentOutput += "7";
+    document.getElementById("display").value = currentOutput;
 }
 
 function eightClicked()
 {
     dbg("8 is clicked");
+    currentOutput += "8";
+    document.getElementById("display").value = currentOutput;
 }
 
 function nineClicked()
 {
     dbg("9 is clicked");
+    currentOutput += "9";
+    document.getElementById("display").value = currentOutput;
 }
 
 function zeroClicked()
 {
     dbg("0 is clicked");
+    currentOutput += "0";
+    document.getElementById("display").value = currentOutput;
 }
 
 function dotClicked()
 {
     dbg(". is clicked");
+    currentOutput += ".";
+    document.getElementById("display").value = currentOutput;
 }
 
 function plusClicked()
 {
     dbg("+ is clicked");
+    currentOutput += "+";
+    document.getElementById("display").value = currentOutput;
 }
 
 function minusClicked()
 {
     dbg("- is clicked");
+    currentOutput += "-";
+    document.getElementById("display").value = currentOutput;
 }
 
 function multiplyClicked()
 {
     dbg("x is clicked");
+    currentOutput += "*";
+    document.getElementById("display").value = currentOutput;
 
     /* คำแนะนำ
         ตัวคูณในภาษาจาวาสคริปคือ *
@@ -118,6 +145,8 @@ function multiplyClicked()
 function divideClicked()
 {
     dbg("÷ is clicked");
+    currentOutput += "/";
+    document.getElementById("display").value = currentOutput;
 
     /* คำแนะนำ
         ตัวหารในภาษาจาวาสคริปคือ /
@@ -127,6 +156,7 @@ function divideClicked()
 function equalClicked()
 {
     dbg("= is clicked");
+    
 
     /* คำแนะนำ 
         ให้ใช้ฟังก์ชั่น eval ในการคำนวนค่าบวกลบคูณหาร
@@ -134,6 +164,11 @@ function equalClicked()
             หรือ eval(ตัวแปร) ก็ได้เช่นเดียวกัน
         **เมื่อ eval แล้วอย่าลืมอัพเดทค่า currentOutput ด้วย**
     */
+
+    var result = eval(currentOutput);
+    document.getElementById("display").value = result;
+    currentOutput = String(result);
+    dbg(String(result));
 
     // ตัวอย่างการแสดงค่าออกทาง console เพื่อดูค่าของตัวแปร currentOutput
     dbg("ค่าของ currentOutput คือ ", currentOutput);
