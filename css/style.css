@@ -2,6 +2,7 @@
     ตัวอย่างสามารถดูได้ในโปรแกรม calculator ใน windows 
 
     Reference: https://www.w3schools.com/cssref/index.php
+    Thai:      https://www.w3bai.com/th/cssref/default.html
 */
 
 /* ส่วนตัวของเว็บ */
@@ -59,7 +60,7 @@ h1{
 }
 
 #zero{
-    width: 80px;
+    width: 40px;
 }
 
 .bt-num{
