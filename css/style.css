@@ -2,7 +2,6 @@
     ตัวอย่างสามารถดูได้ในโปรแกรม calculator ใน windows 
 
     Reference: https://www.w3schools.com/cssref/index.php
-    Thai:      https://www.w3bai.com/th/cssref/default.html
 */
 
 /* ส่วนตัวของเว็บ */
@@ -13,6 +12,7 @@ body{
     border-style: groove;
     /* ให้มีความกว้างอย่างน้อยๆไม่ต่ำกว่า 250 pixels */
     min-width: 250px;
+    background-color: rgba(14, 162, 199, 0.466);
 }
 
 /* ส่วนหัวข้อของหน้าเว็บ */
@@ -23,7 +23,9 @@ h1{
 
 /* ส่วนตัวเครื่องคิดเลข */
 #calc{
-
+    background-color: rgb(32, 223, 223);
+    width: 450px;
+    margin: auto;
 }
 
 /* ส่วนแสดงผลตัวเลข */
@@ -34,8 +36,9 @@ h1{
     display: inline-block;
 
     /* กว้าง 40% ของจอ สูง 10% ของจอ */
-    width: 40vw;
-    height: 10vh;
+    width: 300px;
+    height: 40px;
+    margin: auto;
 
     /* กว้างไม่ต่ำกว่า 200 pixels   */
     min-width: 200px;
@@ -57,6 +60,10 @@ h1{
 .bt{
     width: 40px;
     height: 40px;
+    background-color: rgba(6, 193, 240, 0.945);
+    color: rgb(53, 34, 34);
+    border: 1px solid rgba(116, 84, 84, 0.747);
+
 }
 
 #zero{
@@ -82,3 +89,11 @@ h1{
 .bt-optional{
 
 }
+
+
+
+
+
+
+
+

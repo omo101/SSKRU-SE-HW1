@@ -3,23 +3,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- ส่วนหัว เอาไว้แจ้งตัว browser สำหรับข้อมูลของเว็บเบื้องตั้น และใช้นำเข้าไฟล์ต่างๆ -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> การบ้านที่ 1 โปรแกรมเครื่องคิดเลข </title>
+    <!-- ตั้งค่าหัวข้อของเว็บไซท์ -->
+    <title> การบ้านที่ 1 โปรแกรมเครื่องคิดเลข!!! </title>
 
     <!-- นำเข้าไฟล์ตกแต่ง CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- นำเข้าไฟล์จาวาสคริปที่เพิ่มฟังก์ชั่นให้กับเว็บเรา -->
     <script src="./js/javascript.js"></script>
-
   </head>
   <body>
     <h1>
       Homework 1 - Calculator
     </h1>
-  
+
     <!-- ส่วนหลักของเครื่องคิดเลข -->
     <div id="calc">
       <!-- ส่วนแสดงผลตัวเลข -->
@@ -27,10 +28,10 @@
         <input id="display" type="text" readonly> <br>
       </div>
       <br><br>
-  
+
       <!-- ส่วนปุ่มที่เอาไว้ใช้กด -->
       <div id="inputPanel">
-  
+
         <!-- ปุ่มต่างๆ ที่มีค่า attribute id, class, type, value, onclick -->
         <!--  id = ไอดีของปุ่มนั้นๆ
               class = คลาสของปุ่มนั้นๆ
@@ -39,7 +40,7 @@
               onclick = เมื่อคลิกที่ปุ่มให้ทำอะไร
                 ตัวอย่าง onclick="oneClicked()" แปลว่าเมื่อคลิกให้เรียกฟังก์ชั่น oneClicked() ซึ่งเราประกาศไว้ในไฟล์ javascript
         -->
-  
+
         <!-- คำสั่ง ให้นร.แก้ไขไฟล์ HTML นี้ให้มีหน้าจอแสดงผลสวยงามตามที่โปรแกรมเครื่องคิดเลขควรจะเป็น
               ตัวอย่างสามารถดูได้ในโปรแกรม calculator ใน windows
         -->
@@ -58,12 +59,11 @@
         <input id="nine" class="bt bt-num" type="button" value="9" onclick="nineClicked()">
         <input id="multiply" class="bt bt-ops" type="button" value="x" onclick="multiplyClicked()">
         <br>
-        <input id="zero" class="bt bt-num" type="button" value="0" onclick="zeroClicked()">
         <input id="dot" class="bt bt-num" type="button" value="." onclick="dotClicked()">
-        <input id="divide" class="bt bt-ops" type="button" value="÷" onclick="divideClicked()">
+        <input id="zero" class="bt bt-num" type="button" value="0" onclick="zeroClicked()">
         <input id="equal" class="bt bt-ops" type="button" value="=" onclick="equalClicked()">
+        <input id="divide" class="bt bt-ops" type="button" value="÷" onclick="divideClicked()">
         <br>
-        
         <input id="del" class="bt bt-del" type="button" value="del" onclick="delClicked()">
         <input id="clear" class="bt bt-clear" type="button" value="C" onclick="clearClicked()">
         <!-- Optional buttons ส่วนข้างล่างนี้จะทำหรือไม่ทำก็ได้ -->

@@ -24,20 +24,6 @@ function dbg()
     }
 }
 
-async function requestToServer()
-{
-    // POST
-    let ret = await fetch("post_form.php", {method: 'POST', body: "parameter"});
-    // GET
-    let re2 = await fetch("post_form.php?parameter", {method: 'GET'});
-
-    
-    /*
-    $_GET["param"]
-    $_POST["param"]
-    */
-}
-
 function oneClicked()
 {
     dbg("1 is clicked");
@@ -46,7 +32,7 @@ function oneClicked()
     // ถ้าใช้กับตัวแปรประเภทสตริง จะเป็นการนำอักษรนั้นๆไปต่อท้ายข้อความเดิม
     // ถ้าใช้กับตัวแปรประเภทตัวเลข จะเป็นการคำนวนทางคณิตศาสตร์
     currentOutput += "1";
-
+    //currentOutput = currentOutput + "1";
     // ตัวอย่าง API ในการเข้าถึงและเซตค่า HTML element ด้วยภาษา javascript
         // ตัวอย่าง:
             // var e = document.getElementById("ไอดีของเอเลเม้นนั้นๆ")
@@ -63,7 +49,6 @@ function oneClicked()
 function twoClicked()
 {
     dbg("2 is clicked");
-
     currentOutput += "2";
     document.getElementById("display").value = currentOutput;
 }
@@ -158,7 +143,7 @@ function multiplyClicked()
 
 function divideClicked()
 {
-    dbg("÷ is clicked");
+    dbg("? is clicked");
     currentOutput += "/";
     document.getElementById("display").value = currentOutput;
 
@@ -191,6 +176,8 @@ function equalClicked()
 function delClicked()
 {
     dbg("del is clicked");
+    currentOutput = currentOutput.substring(0, currentOutput.length - 1) 
+    document.getElementById("display").value = currentOutput;
 
     /* คำแนะนำ
         ให้ใช้ฟังก์ชั่น substring() หรือ slice() เพื่อลบตัวอักษรท้ายสุด 
@@ -204,13 +191,13 @@ function delClicked()
 
         ทดสอบการทำงานของสองฟังก์ชั่นได้ตามต้องการ
     */
-   currentOutput = currentOutput.substring(0, currentOutput.length-1);
-   document.getElementById("display").value = currentOutput;
 }
 
 function clearClicked()
 {
     dbg("C is clicked");
+    currentOutput="";
+    document.getElementById("display").value = currentOutput;
 
     /* คำแนะนำ
         ให้ล้างค่า currentOutput และอัพเดท HTML text input id="display" โดยการใช้ document.getElementById()
@@ -218,9 +205,6 @@ function clearClicked()
             document.getElementById("ไอดีของ HTML element").value = "ค่าที่ต้องการ";
 
     */ 
-   
-    currentOutput = "";
-    document.getElementById("display").value = "";
 }
 
 
@@ -228,15 +212,20 @@ function clearClicked()
 function poClicked()
 {
     dbg("( is clicked");
-
-    currentOutput += "(";
+    currentOutput+="(";
     document.getElementById("display").value = currentOutput;
+
 }
 
 function pcClicked()
 {
     dbg(") is clicked");
-
-    currentOutput += ")";
+    currentOutput+=")"
     document.getElementById("display").value = currentOutput;
+
 }
+
+
+
+
+
